@@ -44,47 +44,47 @@ namespace GenericRepositoryUnitOfWork
     public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         //create a protected dbcontext here
-        void IGenericRepository<TEntity>.Add(TEntity entity)
+         public void Add(TEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        void IGenericRepository<TEntity>.AddRange(IEnumerable entities)
+        public void AddRange(IEnumerable entities)
         {
             throw new NotImplementedException();
         }
 
-        IEnumerable IGenericRepository<TEntity>.Find(Expression<Func<TEntity, bool>> predicate)
+        public IEnumerable Find(Expression<Func<TEntity, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        TEntity IGenericRepository<TEntity>.Get(object Id)
+        public TEntity Get(object Id)
         {
             throw new NotImplementedException();
         }
 
-        IEnumerable IGenericRepository<TEntity>.GetAll()
+        public IEnumerable GetAll()
         {
             throw new NotImplementedException();
         }
 
-        void IGenericRepository<TEntity>.Remove(object Id)
+        public void Remove(object Id)
         {
             throw new NotImplementedException();
         }
 
-        void IGenericRepository<TEntity>.Remove(TEntity entity)
+        public void Remove(TEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        void IGenericRepository<TEntity>.RemoveRange(IEnumerable entities)
+        public void RemoveRange(IEnumerable entities)
         {
             throw new NotImplementedException();
         }
 
-        void IGenericRepository<TEntity>.Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             throw new NotImplementedException();
         }
@@ -98,8 +98,10 @@ namespace GenericRepositoryUnitOfWork
 
        public bool SetDepartmentByEmployeeID(int EmployeeID)
         {
+            
             //Entity Framework Here
             return true;
+            
         }
 
     }

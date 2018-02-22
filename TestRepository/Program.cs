@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenericRepositoryUnitOfWork;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,17 @@ namespace TestRepository
             //#1 : Use Generic Repository to perform CRUD operations on Employee
             //#2 : In case you have a specific operation, not covered by methods in generic repisotory, you can use a specific repository inheriting 
 
+            //specific method of the department repository
+            DepartmentRepository depRep = new DepartmentRepository();
+            depRep.SetDepartmentByEmployeeID(10);
+
+            //other methods from generic repository
+            depRep.Add(new Department());
+            
+
+
         }
+
+
     }
 }
