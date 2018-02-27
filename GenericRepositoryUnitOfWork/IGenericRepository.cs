@@ -40,8 +40,9 @@ namespace GenericRepositoryUnitOfWork
     }
 
     //implement the generic repository interface
-   // ** EfGenericRepository **
-    public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+   // ** EfGenericRepository ** But it could be based on any other ORM
+   //  In case of EF, idea is to use same dbcontext to maximize the performance.
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         //create a protected dbcontext here
          public void Add(TEntity entity)
@@ -103,6 +104,8 @@ namespace GenericRepositoryUnitOfWork
             return true;
             
         }
+
+
 
     }
     

@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace TestRepository
 {
+    /// <summary>
+    /// Program to use a stub to showcase calling of generic methods
+    /// Lets check staging
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +25,10 @@ namespace TestRepository
 
             //other methods from generic repository
             depRep.Add(new Department());
-            
+
+            //shows how to use generic repository
+            GenericRepository<Employee> gRecEmployee = new GenericRepository<Employee>();
+            gRecEmployee.Add(new Employee());
 
 
         }
